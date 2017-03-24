@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DeMainMenuBtnComponent } from './de-main-menu-btn.component';
+import { MainMenuBtnComponent } from './main-menu-btn.component';
 
 describe('DeMainMenuBtnComponent', () => {
-  let component: DeMainMenuBtnComponent;
-  let fixture: ComponentFixture<DeMainMenuBtnComponent>;
+  let component: MainMenuBtnComponent;
+  let fixture: ComponentFixture<MainMenuBtnComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DeMainMenuBtnComponent ]
+      declarations: [ MainMenuBtnComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DeMainMenuBtnComponent);
+    fixture = TestBed.createComponent(MainMenuBtnComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

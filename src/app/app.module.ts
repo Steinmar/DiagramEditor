@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
-import { DeMainMenuModule } from './de-main-menu/de-main-menu.module';
+import { MainMenuModule } from './main-menu/main-menu.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +15,8 @@ import { DeMainMenuModule } from './de-main-menu/de-main-menu.module';
     BrowserModule,
     FormsModule,
     HttpModule,
-    DeMainMenuModule
+    MainMenuModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
