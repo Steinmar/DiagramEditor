@@ -2,14 +2,13 @@
     width: 200px;
     height: 45px;
     font-size: 20px;
-    background: #fff;
-    border: 1px solid;
-    float: left;
     display: inline-block;
     margin-left: -1px;
-
-    &::first-child {
-        margin-left: 0;
-    }
+    background: #fff;
+    border: 1px solid #fff;
+    float: left;
+    cursor: pointer;
+    margin: 2px;
+    border-radius: 2px;
 }
 
