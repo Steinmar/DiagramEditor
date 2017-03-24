@@ -7,7 +7,7 @@ import { MainMenuComponent } from './main-menu/main-menu.component';
   imports: [
     CommonModule
   ],
-  exports: [MainMenuBtnComponent, MainMenuComponent],
+  exports: [MainMenuComponent],
   declarations: [MainMenuBtnComponent, MainMenuComponent]
 })
 export class MainMenuModule { }
