@@ -1,0 +1,14 @@
+.menu-btn {
+    float: left;
+    display: inline-block;
+    width: 200px;
+    height: 45px;
+    font-size: 20px;
+    background: #fff;
+    border: 1px solid;
+    margin-left: -1px;
+
+    &::first-child {
+        margin-left: 0;
+    }
+}
