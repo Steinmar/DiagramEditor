@@ -17,3 +17,29 @@
     background: #fff;
     color: #000d1a;
 }
+
+.diagram-area-wrapper {
+    border: 1px solid #6699ff;
+}
+
+.diagram-area {
+    position: relative;
+    min-height: 650px; //we'll set it from directive later
+    border: 1px solid #8f8f8f;
+
+    &::after {
+        background-image: url("/assets/images/cell.png");
+        content: "";
+        opacity: 0.2;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;   
+    }
+}
+
+.diagram-name {
+    display: inline-block;
+}

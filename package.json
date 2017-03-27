@@ -7,7 +7,7 @@
     "url": "https://github.com/Steinmar/DiagramEditor.git"
   },
   "bugs": {
-    "url" : "https://github.com/Steinmar/DiagramEditor/issues" 
+    "url": "https://github.com/Steinmar/DiagramEditor/issues"
   },
   "scripts": {
     "ng": "ng",
