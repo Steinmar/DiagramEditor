@@ -24,8 +24,9 @@
 
 .diagram-area {
     position: relative;
-    min-height: 650px; //we'll set it from directive later
+    min-height: 420px; //we'll set it from directive later
     border: 1px solid #8f8f8f;
+    cursor: pointer;
 
     &::after {
         background-image: url("/assets/images/cell.png");
@@ -42,4 +43,6 @@
 
 .diagram-name {
     display: inline-block;
+    margin: 10px 0;
+    font-size: 20px;
 }
