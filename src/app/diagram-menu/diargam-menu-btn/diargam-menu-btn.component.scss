@@ -1,0 +1,13 @@
+.diagram-menu-btn {
+    background: #f5deb3;
+    height: 10px;
+    width: 15px;
+    display: inline-block;
+    margin: 2px;
+    border: 2px outset #fff;
+    cursor: pointer;
+}
+
+.diagram-menu-btn__mouse-down {
+    border-style:  inset;
+}
