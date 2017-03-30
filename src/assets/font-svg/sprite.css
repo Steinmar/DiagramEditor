@@ -1,0 +1,92 @@
+.icon {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-image: url(sprite.svg);
+}
+.icon-floppy-disk {
+  width: 32px;
+  height: 32px;
+  background-position: 0 0;
+}
+.icon-forward {
+  width: 32px;
+  height: 32px;
+  background-position: -48px 0;
+}
+.icon-reply {
+  width: 32px;
+  height: 32px;
+  background-position: -96px 0;
+}
+.icon-search {
+  width: 32px;
+  height: 32px;
+  background-position: -144px 0;
+}
+.icon-zoom-in {
+  width: 32px;
+  height: 32px;
+  background-position: -192px 0;
+}
+.icon-zoom-out {
+  width: 32px;
+  height: 32px;
+  background-position: -240px 0;
+}
+.icon-enlarge {
+  width: 32px;
+  height: 32px;
+  background-position: -288px 0;
+}
+.icon-shrink {
+  width: 32px;
+  height: 32px;
+  background-position: -336px 0;
+}
+.icon-link {
+  width: 32px;
+  height: 32px;
+  background-position: -384px 0;
+}
+.icon-star-empty {
+  width: 32px;
+  height: 32px;
+  background-position: -432px 0;
+}
+.icon-star-full {
+  width: 32px;
+  height: 32px;
+  background-position: -480px 0;
+}
+.icon-file-pdf {
+  width: 32px;
+  height: 32px;
+  background-position: -528px 0;
+}
+
+/* custom icons */
+
+.icon-undo {
+    /* rotate icon forward */
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+    width: 32px;
+    height: 32px;
+    background-position: -48px 0;
+}
+
+.icon-redo {
+    /* rotate icon reply */
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+    width: 32px;
+    height: 32px;
+    background-position: -96px 0;
+}
+
