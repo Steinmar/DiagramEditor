@@ -19,7 +19,8 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "de",
       "styles": [
-        "styles.css"
+        "styles.css",
+        "assets/font-svg/sprite.css"
       ],
       "scripts": [
       ],
@@ -29,6 +30,9 @@
         "prod": "environments/environment.prod.ts"
       }
     }
+  ],
+  "addons": [
+    "assets/font-svg/*.+(otf|eot|svg|ttf|woff|woff2)"
   ],
   "e2e": {
     "protractor": {
