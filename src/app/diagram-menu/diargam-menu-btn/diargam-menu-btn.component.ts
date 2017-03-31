@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'de-diargam-menu-btn',
@@ -6,22 +6,14 @@ import { Component, OnInit, HostListener } from '@angular/core';
   styleUrls: ['./diargam-menu-btn.component.scss']
 })
 export class DiargamMenuBtnComponent implements OnInit {
+
+  @Input() btnType;
+
   public mouseisDown: boolean;
-
-  constructor() {
-    this.mouseisDown = false;
-  }
-
-  //TODO move this to the direcitve
-  @HostListener('mousedown', ['$event']) onMouseDown(event) {
-        this.mouseisDown = true;
-  }
-
-  @HostListener('mouseup', ['$event']) onMouseUp(event) {
-        this.mouseisDown = false;
-  }
+  public btnClass: string;
 
   ngOnInit() {
+
   }
 
 }

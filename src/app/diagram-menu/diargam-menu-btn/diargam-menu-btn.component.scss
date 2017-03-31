@@ -1,13 +1,32 @@
+.diagram-menu-btn__wrapper {
+    display: inline-block;
+}
 .diagram-menu-btn {
     background: #f5deb3;
     height: 10px;
     width: 15px;
-    display: inline-block;
     margin: 2px;
     border: 2px outset #fff;
     cursor: pointer;
+    width: 30px;
+    height: 30px;
 }
 
 .diagram-menu-btn__mouse-down {
     border-style:  inset;
+}
+
+.diagram-menu-btn__square {
+    width: 26px;
+    height: 26px;
+}
+
+.diagram-menu-btn__line {
+    width: 2px;
+    height: 26px;
+    
+}
+
+.diagram-menu-btn__figure {
+    background: #000;
 }
