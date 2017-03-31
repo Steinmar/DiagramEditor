@@ -1,0 +1,86 @@
+.icon-full-screen {
+    background: url('svg-icons/enlarge.svg');
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.icon-pdf {
+    background: url('svg-icons/file-pdf.svg');
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.icon-save {
+    background: url('svg-icons/floppy-disk.svg');
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.icon-forward {
+    background: url('svg-icons/forward.svg');
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.icon-link {
+    background: url('svg-icons/link.svg');
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.icon-reply {
+    background: url('svg-icons/reply.svg');
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.icon-search {
+    background: url('svg-icons/search.svg');
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.icon-shrink {
+    background: url('svg-icons/shrink.svg');
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.icon-star-empty {
+    background: url('svg-icons/star-empty.svg');
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.icon-star-full {
+    background: url('svg-icons/star-full.svg');
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.icon-zoom-in {
+    background: url('svg-icons/zoom-in.svg');
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.icon-zoom-out {
+    background: url('svg-icons/zoom-out.svg');
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}

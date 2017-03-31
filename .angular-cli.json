@@ -20,7 +20,7 @@
       "prefix": "de",
       "styles": [
         "styles.css",
-        "assets/font-svg/sprite.css"
+        "assets/font-svg/font.css"
       ],
       "scripts": [
       ],
