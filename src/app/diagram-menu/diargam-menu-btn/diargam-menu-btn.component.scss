@@ -12,10 +12,6 @@
     height: 30px;
 }
 
-.diagram-menu-btn__mouse-down {
-    border-style:  inset;
-}
-
 .diagram-menu-btn__square {
     width: 26px;
     height: 26px;
@@ -28,5 +24,13 @@
 }
 
 .diagram-menu-btn__figure {
+    background: #000;
+}
+
+.diagram-menu-btn__undo {
+    background: #000;
+}
+
+.diagram-menu-btn__redo {
     background: #000;
 }
