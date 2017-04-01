@@ -19,7 +19,7 @@ export class DiagramMenuComponent implements OnInit {
         title: 'add new square'
       },
       {
-        type: DIAGRAM_MENU_BTN_TYPE.square,
+        type: DIAGRAM_MENU_BTN_TYPE.line,
         title: 'add new line'
       },
       {
@@ -31,5 +31,9 @@ export class DiagramMenuComponent implements OnInit {
         title: 'redo'
       },
     ];
+  }
+
+  btnPress(btnType: DIAGRAM_MENU_BTN_TYPE) {
+    console.log(btnType);
   }
 }

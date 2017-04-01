@@ -1,4 +1,4 @@
-.icon-full-screen {
+.icon-full-screen::before {
     background: url('svg-icons/enlarge.svg');
     width: 30px;
     height: 30px;
@@ -6,7 +6,7 @@
     background-size: 100%;
 }
 
-.icon-pdf {
+.icon-pdf::before {
     background: url('svg-icons/file-pdf.svg');
     width: 30px;
     height: 30px;
@@ -14,70 +14,70 @@
     background-size: 100%;
 }
 
-.icon-save {
+.icon-save::before {
     background: url('svg-icons/floppy-disk.svg');
     width: 30px;
     height: 30px;
     background-repeat: no-repeat;
     background-size: 100%;
 }
-.icon-forward {
+.icon-forward::before {
     background: url('svg-icons/forward.svg');
     width: 30px;
     height: 30px;
     background-repeat: no-repeat;
     background-size: 100%;
 }
-.icon-link {
+.icon-link::before {
     background: url('svg-icons/link.svg');
     width: 30px;
     height: 30px;
     background-repeat: no-repeat;
     background-size: 100%;
 }
-.icon-reply {
+.icon-reply::before {
     background: url('svg-icons/reply.svg');
     width: 30px;
     height: 30px;
     background-repeat: no-repeat;
     background-size: 100%;
 }
-.icon-search {
+.icon-search::before {
     background: url('svg-icons/search.svg');
     width: 30px;
     height: 30px;
     background-repeat: no-repeat;
     background-size: 100%;
 }
-.icon-shrink {
+.icon-shrink::before {
     background: url('svg-icons/shrink.svg');
     width: 30px;
     height: 30px;
     background-repeat: no-repeat;
     background-size: 100%;
 }
-.icon-star-empty {
+.icon-star-empty::before {
     background: url('svg-icons/star-empty.svg');
     width: 30px;
     height: 30px;
     background-repeat: no-repeat;
     background-size: 100%;
 }
-.icon-star-full {
+.icon-star-full::before {
     background: url('svg-icons/star-full.svg');
     width: 30px;
     height: 30px;
     background-repeat: no-repeat;
     background-size: 100%;
 }
-.icon-zoom-in {
+.icon-zoom-in::before {
     background: url('svg-icons/zoom-in.svg');
     width: 30px;
     height: 30px;
     background-repeat: no-repeat;
     background-size: 100%;
 }
-.icon-zoom-out {
+.icon-zoom-out::before {
     background: url('svg-icons/zoom-out.svg');
     width: 30px;
     height: 30px;
