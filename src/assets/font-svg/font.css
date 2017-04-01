@@ -1,4 +1,6 @@
 .icon-full-screen::before {
+    content: "";
+    display: inline-block;
     background: url('svg-icons/enlarge.svg');
     width: 30px;
     height: 30px;
@@ -7,6 +9,8 @@
 }
 
 .icon-pdf::before {
+    content: "";
+    display: inline-block;
     background: url('svg-icons/file-pdf.svg');
     width: 30px;
     height: 30px;
@@ -15,6 +19,8 @@
 }
 
 .icon-save::before {
+    content: "";
+    display: inline-block;
     background: url('svg-icons/floppy-disk.svg');
     width: 30px;
     height: 30px;
@@ -22,6 +28,8 @@
     background-size: 100%;
 }
 .icon-forward::before {
+    content: "";
+    display: inline-block;
     background: url('svg-icons/forward.svg');
     width: 30px;
     height: 30px;
@@ -29,6 +37,8 @@
     background-size: 100%;
 }
 .icon-link::before {
+    content: "";
+    display: inline-block;
     background: url('svg-icons/link.svg');
     width: 30px;
     height: 30px;
@@ -36,6 +46,8 @@
     background-size: 100%;
 }
 .icon-reply::before {
+    content: "";
+    display: inline-block;
     background: url('svg-icons/reply.svg');
     width: 30px;
     height: 30px;
@@ -43,6 +55,8 @@
     background-size: 100%;
 }
 .icon-search::before {
+    content: "";
+    display: inline-block;
     background: url('svg-icons/search.svg');
     width: 30px;
     height: 30px;
@@ -50,6 +64,8 @@
     background-size: 100%;
 }
 .icon-shrink::before {
+    content: "";
+    display: inline-block;
     background: url('svg-icons/shrink.svg');
     width: 30px;
     height: 30px;
@@ -57,6 +73,8 @@
     background-size: 100%;
 }
 .icon-star-empty::before {
+    content: "";
+    display: inline-block;
     background: url('svg-icons/star-empty.svg');
     width: 30px;
     height: 30px;
@@ -64,6 +82,8 @@
     background-size: 100%;
 }
 .icon-star-full::before {
+    content: "";
+    display: inline-block;
     background: url('svg-icons/star-full.svg');
     width: 30px;
     height: 30px;
@@ -71,6 +91,8 @@
     background-size: 100%;
 }
 .icon-zoom-in::before {
+    content: "";
+    display: inline-block;
     background: url('svg-icons/zoom-in.svg');
     width: 30px;
     height: 30px;
@@ -78,6 +100,8 @@
     background-size: 100%;
 }
 .icon-zoom-out::before {
+    content: "";
+    display: inline-block;
     background: url('svg-icons/zoom-out.svg');
     width: 30px;
     height: 30px;

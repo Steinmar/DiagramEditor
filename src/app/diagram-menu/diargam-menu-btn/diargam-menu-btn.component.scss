@@ -3,6 +3,7 @@ $figureSize: 18px;
 
 .diagram-menu-btn__wrapper {
     display: inline-block;
+    width: 50%;
 }
 .diagram-menu-btn {
     background: #f5deb3;
@@ -20,6 +21,10 @@ $figureSize: 18px;
     border-style:  inset;
 }
 
+.diagram-menu-btn__figure {
+    background: $buttonsBackground;
+}
+
 .diagram-menu-btn__square {
     width: $figureSize;
     height: $figureSize;
@@ -33,14 +38,15 @@ $figureSize: 18px;
 }
 
 .diagram-menu-btn__undo {
-    background: $buttonsBackground;
+    color: $buttonsBackground;
+    transform: rotate(180deg);
 }
 
 .diagram-menu-btn__redo {
-    background: $buttonsBackground;
+    color: $buttonsBackground;
+    transform: rotate(180deg);
 }
 
 .diagram-menu-btn__content {
     display: inline-block;
-    background: $buttonsBackground;
 }

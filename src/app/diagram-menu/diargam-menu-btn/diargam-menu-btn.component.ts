@@ -25,21 +25,23 @@ export class DiargamMenuBtnComponent implements OnInit {
   }
 
   ngOnInit() {
+    let squareClasses = 'diagram-menu-btn__square diagram-menu-btn__figure';
+
     switch (this.data.type) {
       case DIAGRAM_MENU_BTN_TYPE.square:
-        this.btnClass = 'diagram-menu-btn__square';
+        this.btnClass = squareClasses;
         break;
       case DIAGRAM_MENU_BTN_TYPE.line:
-      this.btnClass = 'diagram-menu-btn__line';
+      this.btnClass = 'diagram-menu-btn__line diagram-menu-btn__figure';
         break;
       case DIAGRAM_MENU_BTN_TYPE.undo:
-        this.btnClass = 'diagram-menu-btn__undo';
+        this.btnClass = 'diagram-menu-btn__undo icon-forward ';
         break;
       case DIAGRAM_MENU_BTN_TYPE.redo:
-        this.btnClass = 'diagram-menu-btn__redo';
+        this.btnClass = 'diagram-menu-btn__redo icon-reply';
         break;
       default:
-        this.btnClass = 'diagram-menu-btn__square';
+        this.btnClass = squareClasses;
         break;
     }
   }
