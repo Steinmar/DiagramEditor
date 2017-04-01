@@ -1,1 +1,8 @@
-<span class="diagram-menu-btn" [ngClass] = "{'diagram-menu-btn__mouse-down': mouseisDown}"></span>
+<span class="diagram-menu-btn__wrapper">
+    <div class = "diagram-menu-btn" 
+        [ngClass] = "{'diagram-menu-btn__mouse-down': mouseisDown}" 
+        (click) = "press(data.type)"
+        [title] = "[data.title]">
+        <span class="diagram-menu-btn__content" [ngClass] = "btnClass"></span>
+    </div>
+</span>

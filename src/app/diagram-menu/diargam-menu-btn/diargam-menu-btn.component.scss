@@ -1,13 +1,70 @@
+$buttonsBackground: #000;
+$figureSize: 18px;
+
+.diagram-menu-btn__wrapper {
+    display: inline-block;
+    width: 50%;
+}
 .diagram-menu-btn {
     background: #f5deb3;
-    height: 10px;
-    width: 15px;
-    display: inline-block;
     margin: 2px;
-    border: 2px outset #fff;
+    padding: 0;
     cursor: pointer;
+    border: 2px outset #fff;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 
-.diagram-menu-btn__mouse-down {
+ .diagram-menu-btn__mouse-down {
     border-style:  inset;
+}
+
+.diagram-menu-btn__square {
+    background: $buttonsBackground;
+    width: $figureSize;
+    height: $figureSize;
+    
+}
+
+.diagram-menu-btn__line {
+    height: $figureSize;
+    width: $figureSize;
+    position: relative;
+
+    &::before {
+        width: 2px;
+        height: 28px;
+        content: "";
+        position: absolute;
+        top: -5px;
+        left: 8px;
+        transform: rotate(45deg);
+        background: $buttonsBackground;
+    }
+}
+
+.diagram-menu-btn__undo {
+    color: $buttonsBackground;
+    transform: rotate(180deg);
+}
+
+.diagram-menu-btn__redo {
+    color: $buttonsBackground;
+    transform: rotate(180deg);
+}
+
+.diagram-menu-btn__content {
+    display: inline-block;
+}
+
+.diagram-menu-btn__svg {
+    &::before {
+        width: 20px;
+        height: 20px;
+        margin-top: 5px;
+    }
 }
