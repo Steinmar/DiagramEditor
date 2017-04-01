@@ -20,7 +20,8 @@ export class DiargamMenuBtnComponent implements OnInit {
     this.mouseisDown = false;
   }
 
-  @HostListener('mousedown', ['$event']) onMouseDown(event) {
+  @HostListener('mousedown', ['$event'])
+  onMouseDown(event) {
     this.mouseisDown = true;
   }
 
