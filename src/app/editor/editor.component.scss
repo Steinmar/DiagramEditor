@@ -1,0 +1,29 @@
+.diagram-area-wrapper {
+    border: 1px solid #6699ff;
+    position: relative;
+}
+
+.diagram-area {
+    position: relative;
+    min-height: 420px; //we'll set it from directive later
+    border: 1px solid #8f8f8f;
+    cursor: pointer;
+
+    &::after {
+        background-image: url("/assets/images/cell.png");
+        content: "";
+        opacity: 0.2;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;   
+    }
+}
+
+.diagram-name {
+    display: inline-block;
+    margin: 10px 0;
+    font-size: 20px;
+}

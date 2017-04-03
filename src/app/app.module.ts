@@ -9,17 +9,28 @@ import { MainMenuModule } from './main-menu/main-menu.module';
 import { DiagramMenuModule } from './diagram-menu/diagram-menu.module';
 import { HeaderComponent } from './header/header.component';
 
+import { routing } from './app.routing';
+import { FaqComponent } from './faq/faq.component';
+import { AboutComponent } from './about/about.component';
+import { EditorComponent } from './editor/editor.component';
+import { FooterComponent } from './footer/footer.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    FaqComponent,
+    AboutComponent,
+    EditorComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     MainMenuModule,
-    DiagramMenuModule
+    DiagramMenuModule,
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]

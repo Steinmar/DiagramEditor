@@ -1,17 +1,5 @@
-<!--<header class="app-header">
-  <h1 class="app-title">Diagram editor</h1>
-  <de-main-menu></de-main-menu>
-</header>-->
 <de-header></de-header>
-
 <section class="content">
-  <span class="diagram-name" contenteditable="true">New Diagram</span>
-  <div class="diagram-area-wrapper">
-    <de-diagram-menu></de-diagram-menu>
-    <div class="diagram-area"></div>
-  </div>
+  <router-outlet></router-outlet>
 </section>
-
-<footer class="app-global-footer app-footer-color">
-  developed by <a href = "https://github.com/Steinmar" target="_blank">Alex Rybak</a>
-</footer>
+<de-footer></de-footer>
