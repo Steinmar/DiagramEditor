@@ -7,10 +7,12 @@ import { AppComponent } from './app.component';
 
 import { MainMenuModule } from './main-menu/main-menu.module';
 import { DiagramMenuModule } from './diagram-menu/diagram-menu.module';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
