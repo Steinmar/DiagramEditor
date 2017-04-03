@@ -4,11 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-
-import { MainMenuModule } from './main-menu/main-menu.module';
 import { DiagramMenuModule } from './diagram-menu/diagram-menu.module';
 import { HeaderComponent } from './header/header.component';
-
 import { routing } from './app.routing';
 import { FaqComponent } from './faq/faq.component';
 import { AboutComponent } from './about/about.component';
@@ -28,7 +25,6 @@ import { FooterComponent } from './footer/footer.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    MainMenuModule,
     DiagramMenuModule,
     routing
   ],
