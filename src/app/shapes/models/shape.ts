@@ -3,12 +3,12 @@ import { ISerializable } from './ISerializable';
 import { SHAPE_TYPE } from './shape-type.enum';
 
 export abstract class Shape implements ISerializable {
-    protected coords: Point;
+    protected startCoords: Point;
     protected type: SHAPE_TYPE;
 
     public get coordinates (): Point {
         // think about return coorditates copy
-        return this.coords;
+        return this.startCoords;
     }
 
     // get  point and if it on this shape border - return true

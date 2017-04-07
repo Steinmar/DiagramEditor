@@ -25,6 +25,10 @@ export class Point implements ISerializable {
         return this._y;
     }
 
+    public equals(point: Point) {
+        return this._x === point.x && this._y === point.y;
+    }
+
     public serialize () {
         return `{
             x: ${this._x},
