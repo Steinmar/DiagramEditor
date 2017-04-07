@@ -7,21 +7,21 @@ export class Line extends Shape {
 
     constructor (p0: Point, p1: Point) {
         super();
-        this.coords = p0;
+        this.startCoords = p0;
         this.endCoords = p1;
         this.type = SHAPE_TYPE.line;
     }
 
+    // in line we must check only if point is start
+    // od end coordinates
     public isPartOfBorder(point: Point) {
-        // TODO
-        // code mathimatical alg that check this
-        return true;
+        return this.startCoords.equals(point) || this.endCoords.equals(point);
     }
 
     public serialize () {
         return `{
-            p0: ${this.coords.serialize()},
-            p1: ${this.coords.serialize()},
+            p0: ${this.startCoords.serialize()},
+            p1: ${this.endCoords.serialize()},
             type: ${this.type}
         }`;
     }
