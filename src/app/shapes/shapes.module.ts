@@ -9,9 +9,9 @@ import { CommonModule } from '@angular/common';
 // and directives that'll work with shapers in DOM
 
 @NgModule({
-  imports: [
-    CommonModule
-  ],
-  declarations: []
+    imports: [
+        CommonModule
+    ],
+    declarations: []
 })
 export class ShapesModule { }
