@@ -1,11 +1,13 @@
-<div class="diagram-menu" draggable = "true">
-  <!--<de-diargam-menu-btn></de-diargam-menu-btn>
+<div class="diagram-menu" draggable="true">
+    <!--<de-diargam-menu-btn></de-diargam-menu-btn>
   <de-diargam-menu-btn></de-diargam-menu-btn>-->
-<!--
+    <!--
   <span class="icon icon-forward diaram-menu-icon"></span>
   <span class="icon icon-reply diaram-menu-icon"></span>-->
-  <de-diargam-menu-btn *ngFor = "let btn of buttons" 
-    [data] = "btn"
-    (pressed)="btnPress($event)">
-  </de-diargam-menu-btn>
+    <span *ngFor="let btn of buttons"
+           class="diagram-menu-component__wrapper">
+        <de-diargam-menu-btn  [data]="btn" 
+                (pressed)="btnPress($event)">
+        </de-diargam-menu-btn>
+    </span>
 </div>

@@ -13,22 +13,22 @@ import { EditorComponent } from './editor/editor.component';
 import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    FaqComponent,
-    AboutComponent,
-    EditorComponent,
-    FooterComponent
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule,
-    DiagramMenuModule,
-    routing
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        HeaderComponent,
+        FaqComponent,
+        AboutComponent,
+        EditorComponent,
+        FooterComponent
+    ],
+    imports: [
+        BrowserModule,
+        FormsModule,
+        HttpModule,
+        DiagramMenuModule,
+        routing
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
