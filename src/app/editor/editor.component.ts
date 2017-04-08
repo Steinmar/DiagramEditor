@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 
 @Component({
     selector: 'de-editor',
@@ -8,6 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class EditorComponent implements OnInit {
 
     constructor() { }
+
+    @HostListener('keydown', ['$event'])
+    nameChanged($event) {
+        if ($event.keyCode === 13) {
+            $event.preventDefault();
+        }
+    }
 
     ngOnInit() {
     }
