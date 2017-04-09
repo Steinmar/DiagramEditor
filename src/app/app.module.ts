@@ -11,9 +11,10 @@ import { FaqComponent } from './faq/faq.component';
 import { AboutComponent } from './about/about.component';
 import { EditorComponent } from './editor/editor.component';
 import { FooterComponent } from './footer/footer.component';
-import { SquareComponent } from './editor/AddFigure/figures/square/square/square.component';
-import { LineComponent } from './editor/AddFigure/figures/line/line/line.component';
+import { SquareComponent } from './editor/AddFigure/figures/square/square.component';
+import { LineComponent } from './editor/AddFigure/figures/line/line.component';
 import { DiagramAreaDirective } from './editor/AddFigure/diagram-area.directive';
+import { AddFigureService } from './editor/AddFigure/add-figure.service';
 
 @NgModule({
     declarations: [
@@ -34,7 +35,9 @@ import { DiagramAreaDirective } from './editor/AddFigure/diagram-area.directive'
         DiagramMenuModule,
         routing
     ],
-    providers: [],
+    providers: [
+        AddFigureService
+    ],
     entryComponents: [ SquareComponent, LineComponent ],
     bootstrap: [AppComponent]
 })

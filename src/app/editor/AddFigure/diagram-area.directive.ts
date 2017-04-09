@@ -1,7 +1,7 @@
 import { Directive, ViewContainerRef } from '@angular/core';
 
 @Directive({
-  selector: '[deDiagramArea]'
+  selector: '[de-diagram-area]'
 })
 export class DiagramAreaDirective {
 
