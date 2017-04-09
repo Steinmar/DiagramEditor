@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 import { DIAGRAM_MENU_BTN_TYPE } from './diagram-menu-btn-type.enum';
 import { IDiagramMenuBtn } from './IDiagramMenuBtn';
@@ -9,6 +9,9 @@ import { IDiagramMenuBtn } from './IDiagramMenuBtn';
     styleUrls: ['./diagram-menu.component.scss']
 })
 export class DiagramMenuComponent implements OnInit {
+
+    @Output() btnPressed = new EventEmitter<DIAGRAM_MENU_BTN_TYPE>();
+
     public buttons: IDiagramMenuBtn[];
 
     ngOnInit() {
@@ -34,6 +37,6 @@ export class DiagramMenuComponent implements OnInit {
     }
 
     btnPress(btnType: DIAGRAM_MENU_BTN_TYPE) {
-        console.log(btnType);
+        this.btnPressed.emit(btnType);
     }
 }
