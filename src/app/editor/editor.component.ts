@@ -1,4 +1,6 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, ComponentFactoryResolver, ViewChild } from '@angular/core';
+import { DiagramAreaDirective } from './AddFigure/diagram-area.directive';
+import { DIAGRAM_MENU_BTN_TYPE } from '../diagram-menu/diagram-menu-btn-type.enum';
 
 @Component({
     selector: 'de-editor',
@@ -7,7 +9,9 @@ import { Component, OnInit, HostListener } from '@angular/core';
 })
 export class EditorComponent implements OnInit {
 
-    constructor() { }
+     @ViewChild(DiagramAreaDirective) diagramArea: DiagramAreaDirective;
+
+    constructor(private componentFactoryResolver: ComponentFactoryResolver) { }
 
     //TO DO 
     // may be move this to own component because we don't
@@ -22,4 +26,7 @@ export class EditorComponent implements OnInit {
     ngOnInit() {
     }
 
+    buttonSelected(btn: DIAGRAM_MENU_BTN_TYPE) {
+        
+    }
 }

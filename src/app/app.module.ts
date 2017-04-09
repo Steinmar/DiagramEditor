@@ -11,6 +11,9 @@ import { FaqComponent } from './faq/faq.component';
 import { AboutComponent } from './about/about.component';
 import { EditorComponent } from './editor/editor.component';
 import { FooterComponent } from './footer/footer.component';
+import { SquareComponent } from './editor/AddFigure/figures/square/square/square.component';
+import { LineComponent } from './editor/AddFigure/figures/line/line/line.component';
+import { DiagramAreaDirective } from './editor/AddFigure/diagram-area.directive';
 
 @NgModule({
     declarations: [
@@ -19,7 +22,10 @@ import { FooterComponent } from './footer/footer.component';
         FaqComponent,
         AboutComponent,
         EditorComponent,
-        FooterComponent
+        FooterComponent,
+        SquareComponent,
+        LineComponent,
+        DiagramAreaDirective
     ],
     imports: [
         BrowserModule,
@@ -29,6 +35,7 @@ import { FooterComponent } from './footer/footer.component';
         routing
     ],
     providers: [],
+    entryComponents: [ SquareComponent, LineComponent ],
     bootstrap: [AppComponent]
 })
 export class AppModule { }
