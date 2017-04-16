@@ -1,8 +1,8 @@
 import { Component, OnInit, HostListener, ComponentFactoryResolver, ViewChild } from '@angular/core';
-import { DiagramAreaDirective } from './AddFigure/diagram-area.directive';
+import { DiagramAreaDirective } from './add-figure/diagram-area.directive';
 import { DIAGRAM_MENU_BTN_TYPE } from '../diagram-menu/diagram-menu-btn-type.enum';
-import { AddFigureService } from './AddFigure/add-figure.service';
-import { IAddFigComponent } from './AddFigure/figures/IAddFigComponent';
+import { AddFigureService } from './add-figure/add-figure.service';
+import { IAddFigComponent } from './add-figure/figures/IAddFigComponent';
 
 @Component({
     selector: 'de-editor',
