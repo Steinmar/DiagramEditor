@@ -1,5 +1,6 @@
 import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import { IAddFigComponent } from '../IAddFigComponent';
+import { Observable, Observer } from 'rxjs/Rx';
 
 @Component({
     selector: 'de-square',
@@ -9,15 +10,16 @@ import { IAddFigComponent } from '../IAddFigComponent';
 export class SquareComponent implements OnInit, IAddFigComponent {
 
     @Input() data: any;
-    // @Output() drawLine: EventEmitter<any>;
-    draggable: boolean;
+    draggableChanges: Observable<boolean>;
+    private draggableObserver: Observer<boolean>;
 
     ngOnInit() {
-        this.draggable = false;
-    }
+        this.draggableChanges = new Observable(observer => this.draggableObserver = observer);
 
-    startLine($event) {
-        this.draggable = false;
-        // this.drawLine.emit($event);
+        if (this.data.dragStopObservable) {
+            this.data.dragStopObservable.subscribe(draggable => {
+                this.draggableObserver.next(draggable);
+            });
+        }
     }
 }

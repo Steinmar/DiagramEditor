@@ -15,7 +15,7 @@ import { SquareComponent } from './editor/add-figure/figures/square/square.compo
 import { LineComponent } from './editor/add-figure/figures/line/line.component';
 import { DiagramAreaDirective } from './editor/add-figure/diagram-area.directive';
 import { AddFigureService } from './editor/add-figure/add-figure.service';
-import { NgDraggableModule } from 'angular-draggable';
+import { DraggableModule } from './draggable/draggable.module';
 
 @NgModule({
     declarations: [
@@ -34,7 +34,7 @@ import { NgDraggableModule } from 'angular-draggable';
         FormsModule,
         HttpModule,
         DiagramMenuModule,
-        NgDraggableModule,
+        DraggableModule,
         routing
     ],
     providers: [
