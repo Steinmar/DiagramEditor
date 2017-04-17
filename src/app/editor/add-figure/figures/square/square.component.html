@@ -1,1 +1,6 @@
-<div class="diagram-sqare" draggable="true"></div>
+<div class="diagram-sqare" [draggable]="draggable">
+    <div class="diagram-sqare-left-side" (click)="startLine($event)"></div>
+    <div class="diagram-sqare-right-side" (click)="startLine($event)"></div>
+    <div class="diagram-sqare-top-side" (click)="startLine($event)"></div>
+    <div class="diagram-sqare-bottom-side" (click)="startLine($event)"></div>
+</div>

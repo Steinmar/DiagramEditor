@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import { IAddFigComponent } from '../IAddFigComponent';
 
 @Component({
@@ -6,6 +6,18 @@ import { IAddFigComponent } from '../IAddFigComponent';
     templateUrl: './square.component.html',
     styleUrls: ['./square.component.scss']
 })
-export class SquareComponent implements IAddFigComponent {
+export class SquareComponent implements OnInit, IAddFigComponent {
+
     @Input() data: any;
+    // @Output() drawLine: EventEmitter<any>;
+    draggable: boolean;
+
+    ngOnInit() {
+        this.draggable = false;
+    }
+
+    startLine($event) {
+        this.draggable = false;
+        // this.drawLine.emit($event);
+    }
 }
