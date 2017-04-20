@@ -3,7 +3,7 @@ import { ISerializable } from './ISerializable';
 import { SHAPE_TYPE } from './shape-type.enum';
 
 export abstract class Shape implements ISerializable {
-    protected startCoords: Point;
+    startCoords: Point;
     protected type: SHAPE_TYPE;
 
     public get coordinates (): Point {

@@ -4,7 +4,7 @@ import { DraggableDirective } from '../draggable/draggable.directive';
 import { DIAGRAM_MENU_BTN_TYPE } from '../diagram-menu/diagram-menu-btn-type.enum';
 import { AddFigureService } from './add-figure/add-figure.service';
 import { IAddFigComponent } from './add-figure/figures/IAddFigComponent';
-import { Observable, Observer, Subject } from 'rxjs/Rx';
+import { Observable, Observer } from 'rxjs/Rx';
 
 @Component({
     selector: 'de-editor',
@@ -14,6 +14,10 @@ import { Observable, Observer, Subject } from 'rxjs/Rx';
 export class EditorComponent implements OnInit {
 
     @ViewChild(DiagramAreaDirective) diagramArea: DiagramAreaDirective;
+    mousePos: Observable<any>;
+    private mousePosObserver: Observer<any>;
+    private drawingLine = false;
+    private enableToDrawLine = false;
 
     constructor(private componentFactoryResolver: ComponentFactoryResolver,
         private addFigureService: AddFigureService) { }
@@ -28,7 +32,34 @@ export class EditorComponent implements OnInit {
         }
     }
 
+    @HostListener('mousedown', ['$event'])
+    mouseDown($event) {
+        if (this.enableToDrawLine) {
+            this.drawingLine = true;
+        }
+        this.mousePosObserver.next($event);
+    }
+
+    @HostListener('mousemove', ['$event'])
+    mouseMove($event) {
+        if (!this.enableToDrawLine || !this.drawingLine) {
+            return;
+        }
+        this.mousePosObserver.next($event);
+    }
+
+    @HostListener('mouseup', ['$event'])
+    mouseUp($event) {
+        if (this.enableToDrawLine) {
+            this.drawingLine = false;
+            this.enableToDrawLine = false;
+        }
+        this.mousePosObserver.next($event);
+    }
+
     ngOnInit() {
+        this.mousePos = new Observable(observer => this.mousePosObserver = observer);
+        this.mousePos.subscribe();
     }
 
     buttonSelected(btnType: DIAGRAM_MENU_BTN_TYPE) {
@@ -51,11 +82,13 @@ export class EditorComponent implements OnInit {
         switch (btnType) {
             case DIAGRAM_MENU_BTN_TYPE.square:
                 DraggableDirective.disabled = false;
-                // this.dragStopObserver.next(true);
                 break;
             case DIAGRAM_MENU_BTN_TYPE.line:
-                // this.dragStopObserver.next(false);
                 DraggableDirective.disabled = true;
+                this.enableToDrawLine = true;
+                data = {
+                    mousePos: this.mousePos
+                };
                 break;
             default:
                 break;

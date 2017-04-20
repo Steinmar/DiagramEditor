@@ -3,7 +3,7 @@ import { Point } from './point';
 import { SHAPE_TYPE } from './shape-type.enum';
 
 export class Line extends Shape {
-    protected endCoords;
+    endCoords;
 
     constructor (p0: Point, p1: Point) {
         super();
