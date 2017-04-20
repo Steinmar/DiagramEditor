@@ -1,9 +1,10 @@
 import { Component, OnInit, HostListener, ComponentFactoryResolver, ViewChild } from '@angular/core';
 import { DiagramAreaDirective } from './add-figure/diagram-area.directive';
+import { DraggableDirective } from '../draggable/draggable.directive';
 import { DIAGRAM_MENU_BTN_TYPE } from '../diagram-menu/diagram-menu-btn-type.enum';
 import { AddFigureService } from './add-figure/add-figure.service';
 import { IAddFigComponent } from './add-figure/figures/IAddFigComponent';
-import { Observable, Observer } from 'rxjs/Rx';
+import { Observable, Observer, Subject } from 'rxjs/Rx';
 
 @Component({
     selector: 'de-editor',
@@ -13,8 +14,6 @@ import { Observable, Observer } from 'rxjs/Rx';
 export class EditorComponent implements OnInit {
 
     @ViewChild(DiagramAreaDirective) diagramArea: DiagramAreaDirective;
-    dragStopObservable: Observable<boolean>;
-    private dragStopObserver: Observer<boolean>;
 
     constructor(private componentFactoryResolver: ComponentFactoryResolver,
         private addFigureService: AddFigureService) { }
@@ -30,9 +29,6 @@ export class EditorComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.dragStopObservable = new Observable(observer => this.dragStopObserver = observer);
-        this.dragStopObservable.subscribe();
-        console.log(this.dragStopObserver);
     }
 
     buttonSelected(btnType: DIAGRAM_MENU_BTN_TYPE) {
@@ -54,13 +50,12 @@ export class EditorComponent implements OnInit {
 
         switch (btnType) {
             case DIAGRAM_MENU_BTN_TYPE.square:
-                this.dragStopObserver.next(false);
-
-                let dragStopObservable = this.dragStopObservable;
-                data = { dragStopObservable };
+                DraggableDirective.disabled = false;
+                // this.dragStopObserver.next(true);
                 break;
             case DIAGRAM_MENU_BTN_TYPE.line:
-                this.dragStopObserver.next(false);
+                // this.dragStopObserver.next(false);
+                DraggableDirective.disabled = true;
                 break;
             default:
                 break;

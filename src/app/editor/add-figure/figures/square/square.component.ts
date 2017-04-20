@@ -10,16 +10,7 @@ import { Observable, Observer } from 'rxjs/Rx';
 export class SquareComponent implements OnInit, IAddFigComponent {
 
     @Input() data: any;
-    draggableChanges: Observable<boolean>;
-    private draggableObserver: Observer<boolean>;
 
     ngOnInit() {
-        this.draggableChanges = new Observable(observer => this.draggableObserver = observer);
-
-        if (this.data.dragStopObservable) {
-            this.data.dragStopObservable.subscribe(draggable => {
-                this.draggableObserver.next(draggable);
-            });
-        }
     }
 }

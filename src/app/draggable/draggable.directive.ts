@@ -24,6 +24,7 @@ export class DraggableDirective implements OnDestroy, OnInit, AfterViewInit {
 
     private canDrag = true;
 
+    static disabled: boolean;
     @Input() draggableChanges: Observable<boolean>;
 
     @Input('draggable')
@@ -34,6 +35,7 @@ export class DraggableDirective implements OnDestroy, OnInit, AfterViewInit {
         this.canDrag = !!val;
     }
     private mustBePosition: Array<string> = ['absolute', 'fixed', 'relative'];
+    private d: any = new Date();
     constructor(private el: ElementRef, private renderer: Renderer) {}
 
     ngOnInit(): void {
@@ -55,7 +57,7 @@ export class DraggableDirective implements OnDestroy, OnInit, AfterViewInit {
     }
 
     onDragStart(event: MouseEvent) {
-        if (!this.canDrag) {
+        if (!this.notEnabled()) {
             return;
         }
         this.deltaX = event.x - this.el.nativeElement.offsetLeft;
@@ -63,7 +65,7 @@ export class DraggableDirective implements OnDestroy, OnInit, AfterViewInit {
     }
 
     onDrag(event: MouseEvent) {
-        if (!this.canDrag) {
+        if (!this.notEnabled()) {
             return;
         }
         this.doTranslation(event.x, event.y);
@@ -90,6 +92,12 @@ export class DraggableDirective implements OnDestroy, OnInit, AfterViewInit {
             console.info(val);
             this.canDrag = val;
         });
+    }
+
+    // I do such solutions because now I don't know how make many
+    // subscribers on one observable
+    private notEnabled () {
+        return DraggableDirective.disabled === false || !this.canDrag;
     }
 }
 
