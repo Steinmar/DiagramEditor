@@ -1,5 +1,6 @@
 import { Component, OnInit, HostListener, ComponentFactoryResolver, ViewChild } from '@angular/core';
 import { DiagramAreaDirective } from './add-figure/diagram-area.directive';
+import { DiagramAreaSizeDirective } from './add-figure/diagram-area-size.directive';
 import { DraggableDirective } from '../draggable/draggable.directive';
 import { DIAGRAM_MENU_BTN_TYPE } from '../diagram-menu/diagram-menu-btn-type.enum';
 import { AddFigureService } from './add-figure/add-figure.service';
@@ -14,6 +15,8 @@ import { Observable, Observer } from 'rxjs/Rx';
 export class EditorComponent implements OnInit {
 
     @ViewChild(DiagramAreaDirective) diagramArea: DiagramAreaDirective;
+    @ViewChild(DiagramAreaSizeDirective) diagramAreaSize: DiagramAreaSizeDirective;
+
     mousePos: Observable<any>;
     private mousePosObserver: Observer<any>;
     private drawingLine = false;
@@ -87,7 +90,8 @@ export class EditorComponent implements OnInit {
                 DraggableDirective.disabled = true;
                 this.enableToDrawLine = true;
                 data = {
-                    mousePos: this.mousePos
+                    mousePos: this.mousePos,
+                    areaSize: this.diagramAreaSize.getSize()
                 };
                 break;
             default:

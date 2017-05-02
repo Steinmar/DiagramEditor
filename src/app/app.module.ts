@@ -16,6 +16,7 @@ import { LineComponent } from './editor/add-figure/figures/line/line.component';
 import { DiagramAreaDirective } from './editor/add-figure/diagram-area.directive';
 import { AddFigureService } from './editor/add-figure/add-figure.service';
 import { DraggableModule } from './draggable/draggable.module';
+import { DiagramAreaSizeDirective } from './editor/add-figure/diagram-area-size.directive';
 
 @NgModule({
     declarations: [
@@ -27,7 +28,8 @@ import { DraggableModule } from './draggable/draggable.module';
         FooterComponent,
         SquareComponent,
         LineComponent,
-        DiagramAreaDirective
+        DiagramAreaDirective,
+        DiagramAreaSizeDirective
     ],
     imports: [
         BrowserModule,
