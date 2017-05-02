@@ -42,7 +42,7 @@ export class LineComponent implements OnInit, IAddFigComponent {
                 switch (event.type) {
                     case 'mouseup':
                         this.line.endCoords = new Point(x, y);
-                        this.lineContainer.zIndex = 1;
+                        this.lineContainer.zIndex = 0;
                         subscription.unsubscribe();
                         break;
                     case 'mousemove':
