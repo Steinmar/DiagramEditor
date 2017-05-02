@@ -37,8 +37,8 @@ export class LineComponent implements OnInit, IAddFigComponent {
 
         let subscription = this.data.mousePos
         .subscribe(event => {
-            const x = event.pageX; //event.offsetX;
-            const y = event.pageY; //event.offsetY;
+            const x = event.offsetX;
+            const y = event.offsetY;
 
             switch (event.type) {
                 case 'mouseup':
