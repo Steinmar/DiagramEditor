@@ -26,7 +26,6 @@ export class LineComponent implements OnInit, IAddFigComponent {
 
     ngOnInit() {
         const areaSize = this.data.areaSize;
-        this.line = new Line(new Point(0, 0), new Point(0, 0));
         this.lineContainer = {
             width: areaSize.width,
             height: areaSize.height,
@@ -36,26 +35,26 @@ export class LineComponent implements OnInit, IAddFigComponent {
         };
 
         let subscription = this.data.mousePos
-        .subscribe(event => {
-            const x = event.offsetX;
-            const y = event.offsetY;
+            .subscribe(event => {
+                const x = event.offsetX;
+                const y = event.offsetY;
 
-            switch (event.type) {
-                case 'mouseup':
-                    this.line.endCoords = new Point(x, y);
-                    this.lineContainer.zIndex = 1;
-                    subscription.unsubscribe();
-                    break;
-                case 'mousemove':
-                    this.line.endCoords = new Point(x, y);
-                    break;
-                case 'mousedown':
-                    this.line.startCoords = new Point(x, y);
-                    this.line.endCoords = new Point(x, y);
-                    break;
-                default:
-                    break;
-            }
-        });
+                switch (event.type) {
+                    case 'mouseup':
+                        this.line.endCoords = new Point(x, y);
+                        this.lineContainer.zIndex = 1;
+                        subscription.unsubscribe();
+                        break;
+                    case 'mousemove':
+                        this.line.endCoords = new Point(x, y);
+                        break;
+                    case 'mousedown':
+                        const currPoint = new Point(x, y);
+                        this.line = new Line(currPoint, currPoint);
+                        break;
+                    default:
+                        break;
+                }
+            });
     }
 }
