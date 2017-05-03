@@ -1,0 +1,50 @@
+$sideSize: 6px;
+
+.diagram-sqare {
+    position: absolute;
+    z-index: 1;
+    width: 100px;
+    height: 100px;
+    background: #ffe4b5;
+    border: 1px dashed #000;
+}
+
+.diagram-sqare-left-side {
+    height: 100%;
+    width: $sideSize;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.diagram-sqare-right-side {
+    height: 100%;
+    width: $sideSize;
+    position: absolute;
+    top: 0;
+    left: auto;
+    right: 0;
+}
+
+.diagram-sqare-top-side {
+    height: $sideSize;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.diagram-sqare-bottom-side {
+    height: $sideSize;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.diagram-sqare-left-side, .diagram-sqare-right-side,
+.diagram-sqare-top-side, .diagram-sqare-bottom-side {
+    &:hover {
+        background: rgba(0, 0, 0, 0.4);
+    }
+}

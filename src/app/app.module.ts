@@ -11,11 +11,12 @@ import { FaqComponent } from './faq/faq.component';
 import { AboutComponent } from './about/about.component';
 import { EditorComponent } from './editor/editor.component';
 import { FooterComponent } from './footer/footer.component';
-import { SquareComponent } from './editor/AddFigure/figures/square/square.component';
-import { LineComponent } from './editor/AddFigure/figures/line/line.component';
-import { DiagramAreaDirective } from './editor/AddFigure/diagram-area.directive';
-import { AddFigureService } from './editor/AddFigure/add-figure.service';
-import { NgDraggableModule } from 'angular-draggable';
+import { SquareComponent } from './editor/add-figure/figures/square/square.component';
+import { LineComponent } from './editor/add-figure/figures/line/line.component';
+import { DiagramAreaDirective } from './editor/add-figure/diagram-area.directive';
+import { AddFigureService } from './editor/add-figure/add-figure.service';
+import { DraggableModule } from './draggable/draggable.module';
+import { DiagramAreaSizeDirective } from './editor/add-figure/diagram-area-size.directive';
 
 @NgModule({
     declarations: [
@@ -27,14 +28,15 @@ import { NgDraggableModule } from 'angular-draggable';
         FooterComponent,
         SquareComponent,
         LineComponent,
-        DiagramAreaDirective
+        DiagramAreaDirective,
+        DiagramAreaSizeDirective
     ],
     imports: [
         BrowserModule,
         FormsModule,
         HttpModule,
         DiagramMenuModule,
-        NgDraggableModule,
+        DraggableModule,
         routing
     ],
     providers: [
