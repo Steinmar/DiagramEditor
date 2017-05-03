@@ -11,6 +11,11 @@ interface ILineContainer {
     zIndex: number;
 }
 
+interface ISVGView {
+    container: ILineContainer;
+    line: Line
+}
+
 @Component({
     selector: 'de-line',
     templateUrl: './line.component.html',
@@ -42,7 +47,10 @@ export class LineComponent implements OnInit, IAddFigComponent {
                 switch (event.type) {
                     case 'mouseup':
                         this.line.endCoords = new Point(x, y);
-                        this.lineContainer.zIndex = 0;
+                        const svgView = this.toViewSize(this.line);
+                        this.lineContainer = svgView.container;
+                        this.line = svgView.line;
+                        // this.lineContainer.zIndex = 0;
                         subscription.unsubscribe();
                         break;
                     case 'mousemove':
@@ -56,5 +64,26 @@ export class LineComponent implements OnInit, IAddFigComponent {
                         break;
                 }
             });
+    }
+
+    private toViewSize(line: Line): ISVGView {
+        const start = line.startCoords;
+        const end = line.endCoords;
+        const minX = Math.min(start.x, end.x);
+        const minY = Math.min(start.y, end.y);
+        const newStart = new Point(start.x - minX, start.y - minY);
+        const newEnd = new Point(end.x - minX, end.y - minY);
+        const viewLine = new Line(newStart, newEnd);
+
+        return {
+            container: {
+                top: minY,
+                left: minX,
+                height: viewLine.height,
+                width: viewLine.width,
+                zIndex: 0
+            },
+            line: viewLine
+        }
     }
 }
