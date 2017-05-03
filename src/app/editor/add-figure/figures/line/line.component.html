@@ -1,0 +1,11 @@
+<svg class="line-area" 
+    [style.zIndex] = "lineContainer.zIndex"
+    [style.top] ="lineContainer.top"
+    [style.left] ="lineContainer.left"
+    [attr.height]="lineContainer.height" 
+    [attr.width]="lineContainer.width">
+      <line *ngIf = "line"
+          [attr.x1]="line.startCoords.x"[attr.y1]="line.startCoords.y"
+          [attr.x2]="line.endCoords.x" [attr.y2]="line.endCoords.y"
+          style="stroke:rgb(255,0,0);stroke-width:2" />
+</svg>
