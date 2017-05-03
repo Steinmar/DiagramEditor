@@ -7,6 +7,10 @@ import { AddFigureService } from './add-figure/add-figure.service';
 import { IAddFigComponent } from './add-figure/figures/IAddFigComponent';
 import { Observable, Observer } from 'rxjs/Rx';
 
+// TODO build data structure where store information about lines
+// between figures (maybe graph)
+// don't draw line if it doesn't start and and in squares
+
 @Component({
     selector: 'de-editor',
     templateUrl: './editor.component.html',
