@@ -1,40 +1,36 @@
 import { Node } from './node';
 
+
+// TODO update this realization to normal in future
 export class List {
     private root: Node;
 
-    constructor(public id: string, public data: any) {
-        this.root = new Node(data);
+    constructor() {
         this.root = null;
     }
 
-    insertAfter(afterNode: Node, data: any) {
-        const newNode = new Node(data);
-
-        newNode.next = afterNode.next;
-        afterNode.next = newNode;
+    insertAfter(node: Node, afterNode: Node): void {
+        node.next = afterNode.next;
+        afterNode.next = node;
     }
 
-    push(data: any) {
-        const newNode = new Node(data);
-        
-        newNode.next = null;
-        this.root = this.root.next;
-        this.root.next = newNode;
-    }
-
-    append(data: any) {
+    append(node: Node): void {
         let currNode = this.root;
-        const newNode = new Node(data);
+
+        if (!this.root) {
+            this.root = node;
+            this.root.next = null;
+            return;
+        }
 
         while (currNode.next) {
             currNode = currNode.next;
         }
-        newNode.next = null;
-        currNode.next = newNode;
+        node.next = null;
+        currNode.next = node;
     }
 
-    removeNode(node: Node): void {
+    remove(node: Node): void {
         let currNode = this.root;
         let prev;
 
