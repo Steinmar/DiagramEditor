@@ -22,6 +22,8 @@ export class EditorComponent implements OnInit {
     @ViewChild(DiagramAreaSizeDirective) diagramAreaSize: DiagramAreaSizeDirective;
 
     mousePos: Observable<any>;
+    // TODO use Subject instead Observer for hot Observers
+    // read for example this https://medium.com/@benlesh/on-the-subject-of-subjects-in-rxjs-2b08b7198b93
     private mousePosObserver: Observer<any>;
     private drawingLine = false;
     private enableToDrawLine = false;
